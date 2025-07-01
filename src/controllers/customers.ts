@@ -45,3 +45,4 @@ export async function getCustomerById(req: Request, res:Response) {
         console.log(error)
     }
 }
+
