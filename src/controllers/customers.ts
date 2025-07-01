@@ -33,3 +33,15 @@ export async function getCustomers(req: Request, res: Response){
     }
 }
 
+export async function getCustomerById(req: Request, res:Response) {
+    const {id} = req.params
+
+    try {
+        const customer = await db.customer.findUnique({
+            where:{id}
+        })
+        return res.status(200).json(customer)
+    } catch (error) {
+        console.log(error)
+    }
+}
