@@ -4,4 +4,4 @@ import { PrismaClient } from "@prisma/client"
 
 const db = new PrismaClient()
 
-export { db as bd }
+export { db as db }

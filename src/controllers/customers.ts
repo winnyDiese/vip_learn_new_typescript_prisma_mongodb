@@ -1,4 +1,4 @@
-import { bd } from "@/db/db"
+import { db } from "@/db/db"
 import { Request, Response} from "express"
 
 export async function createCustomer(req: Request, res: Response) {
