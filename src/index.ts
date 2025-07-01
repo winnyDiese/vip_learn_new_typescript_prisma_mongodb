@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import customerRouter from "./routers/customers";
 
 require("dotenv").config()
 const cors = require('cors')
@@ -27,3 +28,5 @@ app.get("/customers", async (req:Request, res:Response) => {
 
     return res.status(200).json(customers)
 })
+
+app.use("/api/v1", customerRouter)
